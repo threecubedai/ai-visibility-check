@@ -112,7 +112,12 @@ Then ask Claude to "check the AI visibility of example.com" and it runs the tool
 
 ### As a Claude Skill
 
-For a smoother experience, install the bundled skill so Claude runs the check automatically when you ask about AI visibility, with no tool name needed. Copy the `skills/ai-visibility-check` folder from this repo into your skills folder (`~/.claude/skills/` for Claude Code), then ask "is my site AI-visible?".
+Install the bundled skill so Claude runs the check automatically when you ask about AI visibility, with no tool name needed.
+
+- **Claude Code:** copy the `skills/ai-visibility-check` folder from this repo into `~/.claude/skills/`.
+- **Claude Desktop or Claude.ai:** download [`skills/ai-visibility-check.skill`](skills/ai-visibility-check.skill) and upload it under Settings, Capabilities, Skills.
+
+Then ask "is my site AI-visible?" and Claude runs the tool and walks you through the fixes.
 
 ### In Codex
 
