@@ -1,6 +1,6 @@
 ---
 name: ai-visibility-check
-description: Check whether AI assistants (ChatGPT, Gemini, Perplexity, Claude) can find and cite a website, score its readiness, and apply the fixes. Use this whenever the user asks about AI visibility, AI search readiness, GEO or AEO, whether ChatGPT or Perplexity can "see" or cite their site, why a site is not showing up in AI answers, llms.txt, AI crawler access in robots.txt, or wants to audit or improve a site for generative engine optimization, even when they do not name a specific tool.
+description: Use when someone wants their website to be found, read, recommended, or cited by AI assistants and AI search such as ChatGPT, Gemini, Perplexity, Claude, or Google AI Overviews. Trigger on questions like: why aren't we showing up in AI answers or chatbot recommendations; can the AI engines actually read our site, especially after a React or Next.js or JS rebuild that may render blank to crawlers; is AI eating our Google traffic; do we need an llms.txt; are AI crawlers blocked in robots.txt; is our site ready to be cited. Also trigger on any ask to audit, check, score, or improve a site for AI visibility, GEO, AEO, or generative engine optimization, before a launch or anytime, even when phrased in plain words with no tool named. Do not use for ordinary SEO or page-speed work, schema validation by itself, or whether an AI service is currently down.
 ---
 
 # AI Visibility Check
