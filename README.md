@@ -84,6 +84,32 @@ Add it to CI to catch regressions (for example, someone accidentally blocking an
     min-score: 70
 ```
 
+## Use it inside Claude (and other MCP clients)
+
+It is also an MCP server, so Claude Desktop, Claude Code, Cursor, and other MCP clients can call it as a tool (`check_ai_visibility`). Install the command, then register it:
+
+```bash
+npm install -g github:threecubedai/ai-visibility-check
+```
+
+Claude Code:
+
+```bash
+claude mcp add ai-visibility -- ai-visibility-check-mcp
+```
+
+Claude Desktop (add to `claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "ai-visibility": { "command": "ai-visibility-check-mcp" }
+  }
+}
+```
+
+Then ask Claude to "check the AI visibility of example.com" and it runs the tool for you.
+
 ## What this is, and isn't
 
 This checks whether AI engines **can** read and understand your site. It does not tell you whether they **actually recommend you** today, or whether that holds up over time. For ongoing citation tracking across all four engines, see [findabl.app](https://findabl.app).

@@ -1,10 +1,11 @@
 {
   "name": "ai-visibility-check",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Check whether a website is ready to be cited by AI engines (ChatGPT, Gemini, Perplexity, Claude).",
   "type": "module",
   "bin": {
-    "ai-visibility-check": "dist/index.js"
+    "ai-visibility-check": "dist/index.js",
+    "ai-visibility-check-mcp": "dist/mcp.js"
   },
   "files": ["dist"],
   "scripts": {
@@ -15,7 +16,9 @@
   "keywords": ["geo", "aeo", "ai-search", "llm", "seo", "chatgpt", "perplexity"],
   "license": "MIT",
   "dependencies": {
-    "node-html-parser": "^6.1.13"
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "node-html-parser": "^6.1.13",
+    "zod": "^3.25.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.0",
