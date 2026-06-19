@@ -1,0 +1,23 @@
+name: "AI Visibility Check"
+description: "Check whether a URL is ready to be cited by AI engines, and optionally fail the build below a score."
+branding:
+  icon: "search"
+  color: "orange"
+inputs:
+  url:
+    description: "The URL to check."
+    required: true
+  min-score:
+    description: "Fail the job if the score is below this value (0-100). Default 0 (never fail)."
+    required: false
+    default: "0"
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+    # Runs the published package. Until it is published to npm, point this at the
+    # repo instead (npm ci && npm run build && node dist/index.js ...).
+    - shell: bash
+      run: npx --yes ai-visibility-check@latest "${{ inputs.url }}" --min=${{ inputs.min-score }}
