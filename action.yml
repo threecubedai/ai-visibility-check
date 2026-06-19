@@ -17,7 +17,6 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: "20"
-    # Runs the published package. Until it is published to npm, point this at the
-    # repo instead (npm ci && npm run build && node dist/index.js ...).
+    # Runs the tool straight from the public repo, no npm publish required.
     - shell: bash
-      run: npx --yes ai-visibility-check@latest "${{ inputs.url }}" --min=${{ inputs.min-score }}
+      run: npx --yes github:threecubedai/ai-visibility-check "${{ inputs.url }}" --min=${{ inputs.min-score }}

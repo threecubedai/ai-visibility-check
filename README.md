@@ -6,10 +6,10 @@ Most "AI SEO" advice is vague. This is concrete: it fetches your page and checks
 
 ## Use it
 
-No install needed (Node 20+):
+No install needed (Node 20+). Run it straight from the repo:
 
 ```bash
-npx ai-visibility-check example.com
+npx github:threecubedai/ai-visibility-check example.com
 ```
 
 Options:
@@ -17,8 +17,10 @@ Options:
 - `--min=70` to exit with an error below a score (so you can fail a build).
 
 ```bash
-npx ai-visibility-check https://example.com --min=70
+npx github:threecubedai/ai-visibility-check https://example.com --min=70
 ```
+
+Once it is published to npm, this shortens to `npx ai-visibility-check <url>`.
 
 ## What it looks like
 

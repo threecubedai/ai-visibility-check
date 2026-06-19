@@ -9,8 +9,8 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsc",
-    "check": "tsx src/index.ts",
-    "prepublishOnly": "tsc"
+    "prepare": "tsc",
+    "check": "tsx src/index.ts"
   },
   "keywords": ["geo", "aeo", "ai-search", "llm", "seo", "chatgpt", "perplexity"],
   "license": "MIT",
