@@ -110,6 +110,19 @@ Claude Desktop (add to `claude_desktop_config.json`):
 
 Then ask Claude to "check the AI visibility of example.com" and it runs the tool for you.
 
+### As a Claude Skill
+
+For a smoother experience, install the bundled skill so Claude runs the check automatically when you ask about AI visibility, with no tool name needed. Copy the `skills/ai-visibility-check` folder from this repo into your skills folder (`~/.claude/skills/` for Claude Code), then ask "is my site AI-visible?".
+
+### In Codex
+
+Codex CLI supports MCP servers too. After `npm install -g github:threecubedai/ai-visibility-check`, add this to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.ai-visibility]
+command = "ai-visibility-check-mcp"
+```
+
 ## What this is, and isn't
 
 This checks whether AI engines **can** read and understand your site. It does not tell you whether they **actually recommend you** today, or whether that holds up over time. For ongoing citation tracking across all four engines, see [findabl.app](https://findabl.app).
